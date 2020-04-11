@@ -7,7 +7,7 @@ defmodule AppWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_app_key",
-    signing_salt: "KbGfHjhO"
+    signing_salt: "Fir8x4nA"
   ]
 
   socket "/socket", AppWeb.UserSocket,
