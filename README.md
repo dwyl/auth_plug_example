@@ -26,4 +26,10 @@ e.g: `atom .`
 
 ### 2. Add `auth_plug` to `deps`
 
-Open the `mix.exs` file and locate the `defp deps do` section.
+Open the `mix.exs` file
+and locate the `defp deps do` section.
+Add the line:
+
+```
+{:auth_plug, "~> 0.1.0"}
+```
