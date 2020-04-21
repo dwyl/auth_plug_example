@@ -13,10 +13,22 @@ defmodule AppWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :auth do
+    plug AuthPlug
+  end
+
+
   scope "/", AppWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+  end
+
+  scope "/", AppWeb do
+    pipe_through :browser
+    pipe_through :auth
+
+    get "/admin", PageController, :admin
   end
 
   # Other scopes may use custom stacks.
