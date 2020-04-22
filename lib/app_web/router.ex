@@ -14,7 +14,7 @@ defmodule AppWeb.Router do
   end
 
   pipeline :auth do
-    plug AuthPlug
+    plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
   end
 
 

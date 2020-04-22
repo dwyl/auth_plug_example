@@ -42,7 +42,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.0"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 0.2.0"}
+      {:auth_plug, "~> 0.3.1"}
     ]
   end
 
