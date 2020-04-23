@@ -1,0 +1,3 @@
+<section class="phx-hero">
+  <h1>Welcome <%= @conn.assigns.decoded.givenName %>!</h1>
+</section>

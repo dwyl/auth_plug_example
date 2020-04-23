@@ -6,6 +6,7 @@ defmodule AppWeb.PageController do
   end
 
   def admin(conn, _param) do
-    send_resp(conn, 200, "Admin!")
+    # send_resp(conn, 200, "Admin!")
+    render(conn, "admin.html")
   end
 end
