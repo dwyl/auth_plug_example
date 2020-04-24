@@ -31,7 +31,7 @@ and locate the `defp deps do` section.
 Add the line:
 
 ```
-{:auth_plug, "~> 0.1.0"}
+{:auth_plug, "~> 0.9.0"}
 ```
 
 E.g:

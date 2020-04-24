@@ -13,15 +13,15 @@ defmodule AppWeb.Router do
     plug :accepts, ["json"]
   end
 
-  pipeline :auth do
-    plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
-  end
-
 
   scope "/", AppWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+  end
+
+  pipeline :auth do
+    plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
   end
 
   scope "/", AppWeb do
@@ -30,9 +30,4 @@ defmodule AppWeb.Router do
 
     get "/admin", PageController, :admin
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", AppWeb do
-  #   pipe_through :api
-  # end
 end
