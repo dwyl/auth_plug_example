@@ -31,8 +31,8 @@ and locate the `defp deps do` section.
 Add the line:
 
 ```
-{:auth_plug, "~> 0.9.0"}
+{:auth_plug, "~> 1.1.0"}
 ```
 
 E.g:
-[mix.exs#L44-L45](https://github.com/dwyl/auth_plug_example/blob/b454443b1a1618d3831fab3d5f7db81fe2e59586/mix.exs#L44-L45)
+[mix.exs#L45](https://github.com/dwyl/auth_plug_example/blob/36f2fbf4d74dd3932119c5ca3f3562106dae08c4/mix.exs#L45)
