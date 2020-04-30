@@ -7,12 +7,13 @@ for authenticated routes.
 ## Why?
 
 The purpose of this project/repo is to demonstrate how simple
-is to integrate **`auth_plug`** into _any_ Phoenix Web App/API.
+it is to integrate **`auth_plug`** into _any_ Phoenix Web App/API.
 
 ## What?
 
 The most basic example of using **`auth_plug`**
-to
+to add Authentication to a Phoenix App 
+and showcase a protected route. 
 
 
 ## Who?
@@ -20,6 +21,9 @@ to
 This example is for us @dwyl who will be using **`auth_plug`**
 in all our projects and more specifically for our
 [`App`](https://github.com/dwyl/app).
+But we have made it as _generic_ as possible 
+to show that _anyone_ can use (an instance of the) Auth Service
+to add Auth to _any_ app in less than 2 minutes!
 
 
 
@@ -39,10 +43,12 @@ For more info, see:
 https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html <br />
 > The beauty is that this simple use-case
 is identical to the advanced one.
+Once you understand these basic principals,
+you "grock" how to use `auth_plug` _anywhere_!
 
 
 Change into the `app` directory (`cd app`)
-and open the project in your text editor (or IDE).
+and open the project in your text editor (or IDE). <br />
 e.g: `atom .`
 
 
@@ -87,7 +93,7 @@ Immediately below this add the following lines of code:
 [`/lib/app_web/router.ex#L23-L29`](https://github.com/dwyl/auth_plug_example/blob/8ce0f10e656b94a93b8f02af240b3897ce23c006/lib/app_web/router.ex#L23-L29)
 
 
-#### _Explanation_
+#### _Explanation_
 
 There are two parts to this code:
 
@@ -118,12 +124,14 @@ Directly below it, add the following code:
   end
 ```
 
-This just means when the `admin/2` function is invoked,
-render the `admin.html` template.
-Speaking of which, let's create it!
-
 > E.g:
 [`/lib/app_web/controllers/page_controller.ex#L8-L10`](https://github.com/dwyl/auth_plug_example/blob/e0e31dbf341f4b8877bca0a9ec846b538e04406a/lib/app_web/controllers/page_controller.ex#L8-L10)
+
+
+This just means when the `admin/2` function is invoked,
+render the `admin.html` template. <br />
+Speaking of which, let's create it!
+
 
 
 ### 5. Create the `admin.html.eex` Template
