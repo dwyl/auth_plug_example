@@ -20,14 +20,12 @@ defmodule AppWeb.Router do
     get "/", PageController, :index
   end
 
-  pipeline :auth do
-    plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
-  end
+  pipeline :auth, do: plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
 
   scope "/", AppWeb do
     pipe_through :browser
     pipe_through :auth
-
     get "/admin", PageController, :admin
   end
+  
 end
