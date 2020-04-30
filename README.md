@@ -158,8 +158,46 @@ And paste the following code into it:
 
 ### 6. Get and Set the `AUTH_API_KEY` Environment Variable
 
+Visit: https://dwylauth.herokuapp.com/settings/apikeys/new
+and create a New API Key.
 
+
+![auth_plug_example_setup](https://user-images.githubusercontent.com/194400/80759455-3eb51500-8b2f-11ea-98fe-6e5154bfb349.gif)
+
+Save the key as an environment variable named `AUTH_API_KEY`.
+Remember to `export` the environment variable
+or add it to an `.env` file which should be in your `.gitignore` file. 
+
+> **Note**: If you are new to Environment Variables,
+please see:
+https://github.com/dwyl/learn-environment-variables
 
 
 ### 7. Run the App!
 
+Run your phoenix app on localhost:
+
+```
+mix phx.server
+```
+
+Now open your web browser to: http://localhost:4000/admin
+
+Given that you are not yet authenticated, 
+your request will be redirected to 
+https://dwylauth.herokuapp.com/?referer=http://localhost:4000/admin&auth_client_id=etc
+
+Once you have successfully authenticated with your GitHub or Google account,
+you will be redirected back to `localhost:4000/admin` 
+where the `/admin` route will be visible.
+
+![admin-route](https://user-images.githubusercontent.com/194400/80760439-d23b1580-8b30-11ea-8941-160ece8a4a5f.png)
+
+## That's it!! 🎉 
+
+You just setup auth in a brand new phoenix app using **`auth_plug`**!
+
+If you got stuck or have any questions,
+please 
+[open an issue](https://github.com/dwyl/auth_plug/issues),
+we are here to help!
