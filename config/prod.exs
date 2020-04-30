@@ -15,9 +15,10 @@ config :app, AppWeb.Endpoint,
     transport_options: [socket_opts: [:inet6]]
   ],
   url: [scheme: "https", host: "auth-plug-example.herokuapp.com", port: 443],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  # cache_static_manifest: "priv/static/cache_manifest.json"
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  cache_static_manifest: "priv/static/cache_manifest.json"
   # ssl: true
 
 # Do not print debug messages in production
