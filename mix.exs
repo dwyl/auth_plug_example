@@ -4,8 +4,8 @@ defmodule App.MixProject do
   def project do
     [
       app: :app,
-      version: "0.1.0",
-      elixir: "~> 1.5",
+      version: "1.0.0",
+      elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -42,7 +42,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.0"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.0.0"}
+      {:auth_plug, "~> 1.1.0"}
     ]
   end
 
