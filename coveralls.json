@@ -4,7 +4,8 @@
   },
   "skip_files": [
     "test/",
-    "lib/demo/router.ex",
-    "lib/demo/application.ex"
+    "lib/app.ex",
+    "lib/app_web.ex",
+    "lib/app_web/views/error_helpers.ex"
   ]
 }
