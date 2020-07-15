@@ -1,24 +1,40 @@
-# `auth_plug` _Example_
+<div align="center">
 
-Example using
-[`auth_plug`](https://github.com/dwyl/auth_plug)
-for authenticated routes.
+# `auth_plug` _example_
+
+A working example of
+[**`auth_plug`**](https://github.com/dwyl/auth_plug)
+showing you how simple it is
+to add enable
+[**`auth`**](https://github.com/dwyl/auth)
+to your Phoenix App!
+
+[![Build Status](https://img.shields.io/travis/dwyl/auth_plug_example/master.svg?style=flat-square)](https://travis-ci.org/dwyl/auth_plug_example)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](http://codecov.io/github/dwyl/auth_plug_example?branch=master)
+[![Hex.pm](https://img.shields.io/hexpm/v/auth_plug?color=brightgreen&style=flat-square)](https://hex.pm/packages/auth_plug)
+[![Libraries.io dependency status](https://img.shields.io/librariesio/release/hex/auth_plug?logoColor=brightgreen&style=flat-square)](https://github.com/dwyl/auth_plug/blob/master/mix.exs)
+[![HitCount](http://hits.dwyl.com/dwyl/auth_plug_example.svg)](http://hits.dwyl.com/dwyl/auth_plug_example)
+</div>
+<br />
+
 
 ## Why?
 
 The purpose of this project/repo is to demonstrate how simple
 it is to integrate **`auth_plug`** into _any_ Phoenix Web App/API.
 
+
 ## What?
 
 The most basic example of using **`auth_plug`**
-to add Authentication to a Phoenix App 
-and showcase a protected route. 
-
+to add Authentication to a Phoenix App
+and showcase a protected route.
 
 Before you attempt to use the **`auth_plug`**,
 try the Heroku example version so you know what to expect:
 https://auth-plug-example.herokuapp.com/admin
+
+You will be redirected to:
 
 ![auth_plug_example](https://user-images.githubusercontent.com/194400/80765920-154eb600-8b3c-11ea-90d4-a64224d31a5b.png)
 
@@ -29,7 +45,7 @@ https://auth-plug-example.herokuapp.com/admin
 This example is for us @dwyl who will be using **`auth_plug`**
 in all our projects and more specifically for our
 [`App`](https://github.com/dwyl/app).
-But we have made it as _generic_ as possible 
+But we have made it as _generic_ as possible
 to show that _anyone_ can use (an instance of the) Auth Service
 to add Auth to _any_ app in less than 2 minutes!
 
@@ -97,7 +113,7 @@ Immediately below this add the following lines of code:
   end
 ```
 
-> E.g: 
+> E.g:
 [`/lib/app_web/router.ex#L23-L29`](https://github.com/dwyl/auth_plug_example/blob/8ce0f10e656b94a93b8f02af240b3897ce23c006/lib/app_web/router.ex#L23-L29)
 
 
@@ -107,7 +123,7 @@ There are two parts to this code:
 
 1. Create a new pipeline called `:auth` which will execute the `AuthPlug`
 passing in the `auth_url` as an initialisation option.
-2. Create a new scope where we `pipe_through` 
+2. Create a new scope where we `pipe_through`
 both the `:browser` and `:auth` pipelines.
 
 This means that the `"/admin"` route is protected by `AuthPlug`.
@@ -115,7 +131,7 @@ This means that the `"/admin"` route is protected by `AuthPlug`.
 
 ### 4. Add the `admin` function to the `PageController`
 
-Open the `/lib/app_web/controllers/page_controller.ex` file 
+Open the `/lib/app_web/controllers/page_controller.ex` file
 and locate the `def index` function:
 
 ```elixir
@@ -174,7 +190,7 @@ and create a New API Key.
 
 Save the key as an environment variable named `AUTH_API_KEY`.
 Remember to `export` the environment variable
-or add it to an `.env` file which should be in your `.gitignore` file. 
+or add it to an `.env` file which should be in your `.gitignore` file.
 
 > **Note**: If you are new to Environment Variables,
 please see:
@@ -191,22 +207,21 @@ mix phx.server
 
 Now open your web browser to: http://localhost:4000/admin
 
-Given that you are not yet authenticated, 
-your request will be redirected to 
+Given that you are not yet authenticated,
+your request will be redirected to
 https://dwylauth.herokuapp.com/?referer=http://localhost:4000/admin&auth_client_id=etc
 
 Once you have successfully authenticated with your GitHub or Google account,
-you will be redirected back to `localhost:4000/admin` 
+you will be redirected back to `localhost:4000/admin`
 where the `/admin` route will be visible.
 
 ![admin-route](https://user-images.githubusercontent.com/194400/80760439-d23b1580-8b30-11ea-8941-160ece8a4a5f.png)
 
-## That's it!! 🎉 
+## That's it!! 🎉
 
 You just setup auth in a brand new phoenix app using **`auth_plug`**!
 
 If you got stuck or have any questions,
-please 
+please
 [open an issue](https://github.com/dwyl/auth_plug/issues),
 we are here to help!
-
