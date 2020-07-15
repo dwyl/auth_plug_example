@@ -9,11 +9,6 @@ defmodule AppWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
-
   scope "/", AppWeb do
     pipe_through :browser
 
@@ -27,5 +22,5 @@ defmodule AppWeb.Router do
     pipe_through :auth
     get "/admin", PageController, :admin
   end
-  
+
 end
