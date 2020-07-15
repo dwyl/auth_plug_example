@@ -33,13 +33,13 @@ defmodule App.MixProject do
   # Specifies project dependencies:
   defp deps do
     [
-      {:phoenix, "~> 1.4.16"},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:phoenix_html, "~> 2.11"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix, "~> 1.5.3"},
+      {:phoenix_pubsub, "~> 2.0.0"},
+      {:phoenix_html, "~> 2.14.2"},
+      {:phoenix_live_reload, "~> 1.2.4", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
+      {:plug_cowboy, "~> 2.3.0"},
 
       # github.com/dwyl/auth_plug
       {:auth_plug, "~> 1.2.0"},
