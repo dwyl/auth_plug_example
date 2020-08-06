@@ -4,7 +4,7 @@ defmodule App.MixProject do
   def project do
     [
       app: :app,
-      version: "1.2.0",
+      version: "1.2.1",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -33,7 +33,7 @@ defmodule App.MixProject do
   # Specifies project dependencies:
   defp deps do
     [
-      {:phoenix, "~> 1.5.3"},
+      {:phoenix, "~> 1.5.4"},
       {:phoenix_pubsub, "~> 2.0.0"},
       {:phoenix_html, "~> 2.14.2"},
       {:phoenix_live_reload, "~> 1.2.4", only: :dev},
@@ -42,7 +42,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.3.0"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.2.0"},
+      {:auth_plug, "~> 1.2.1"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.13.0", only: :test}
