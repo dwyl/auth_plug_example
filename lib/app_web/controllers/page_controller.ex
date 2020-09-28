@@ -6,6 +6,7 @@ defmodule AppWeb.PageController do
   end
 
   def admin(conn, _param) do
+    IO.inspect(conn.assigns.person, label: "conn.assigns.person")
     render(conn, "admin.html")
   end
 end
