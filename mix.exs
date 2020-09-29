@@ -33,7 +33,7 @@ defmodule App.MixProject do
   # Specifies project dependencies:
   defp deps do
     [
-      {:phoenix, "~> 1.5.4"},
+      {:phoenix, "~> 1.5.5"},
       {:phoenix_pubsub, "~> 2.0.0"},
       {:phoenix_html, "~> 2.14.2"},
       {:phoenix_live_reload, "~> 1.2.4", only: :dev},
@@ -42,7 +42,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.3.0"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.2.1"},
+      {:auth_plug, "~> 1.2.3"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.13.0", only: :test}
