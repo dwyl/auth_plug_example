@@ -13,11 +13,15 @@
       <section class="container">
         <nav role="navigation">
           <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+            <li style="float:right"><a href="/optional">Auth Optional</a></li>
+            <li style="float:right; margin-right:20px;"><a href="/admin">Admin</a></li>
+            <%= if Map.has_key?(@conn.assigns, :person) do %>
+              <li> <img width="32px" src="<%= @conn.assigns.person.picture %>" style="float:right;"/> </li>
+            <% end %>
           </ul>
         </nav>
         <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" height="50px" alt="Phoenix Framework Logo"/>
         </a>
       </section>
     </header>

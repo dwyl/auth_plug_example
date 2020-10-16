@@ -13,6 +13,7 @@ config :app, AppWeb.Endpoint,
   secret_key_base: "Eu8e8Anoh4Cnebh0gA+ZKsOwNz8WozQSILdGsxCjre9WjiQ4z8BXtH/VFBTCzMSD",
   render_errors: [view: AppWeb.ErrorView, accepts: ~w(html json)],
   # pubsub: [name: App.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: App.PubSub,
   live_view: [signing_salt: "mgRO+JX0"]
 
 # Configures Elixir's Logger
