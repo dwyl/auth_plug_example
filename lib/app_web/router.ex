@@ -17,6 +17,7 @@ defmodule AppWeb.Router do
     pipe_through :authoptional
     get "/", PageController, :index
     get "/optional", PageController, :optional
+    get "/ping", PageController, :ping
   end
 
   pipeline :auth, do: plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})

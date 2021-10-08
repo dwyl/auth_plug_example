@@ -5,7 +5,7 @@ defmodule App.MixProject do
     [
       app: :app,
       version: "1.2.1",
-      elixir: "~> 1.10",
+      elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -42,10 +42,12 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.3.0"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.2.3"},
+      {:auth_plug, "~> 1.3.0"},
+      # wake up Heroku app
+      {:ping, "~> 1.1.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
-      {:excoveralls, "~> 0.13.0", only: :test}
+      {:excoveralls, "~> 0.14.3", only: :test}
     ]
   end
 end

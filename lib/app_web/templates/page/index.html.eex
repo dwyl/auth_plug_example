@@ -2,4 +2,5 @@
   <h1><%= gettext "Welcome to %{name}!", name: "AuthPlug Example" %></h1>
   <p>A demo of using <a href="https://github.com/dwyl/auth_plug">auth_plug</a><br/>
     to show how easy it is to add Auth to your Pheonix App.</p>
+  <p>Try it now by accessing the <a href="/admin">admin</a> section.
 </section>

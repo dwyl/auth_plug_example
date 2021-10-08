@@ -20,8 +20,8 @@
             <% end %>
           </ul>
         </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" height="50px" alt="Phoenix Framework Logo"/>
+        <a href="https://github.com/dwyl/auth_plug">
+          <b>auth_plug<b>
         </a>
       </section>
     </header>
