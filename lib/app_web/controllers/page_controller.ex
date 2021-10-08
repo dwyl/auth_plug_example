@@ -14,4 +14,8 @@ defmodule AppWeb.PageController do
     # IO.inspect(conn.assigns, label: "conn.assigns")
     render(conn, "optional.html")
   end
+
+  def ping(conn, params) do
+    Ping.render_pixel(conn, params)
+  end
 end

@@ -33,6 +33,7 @@ and showcase a protected route.
 Before you attempt to use the **`auth_plug`**,
 try the Heroku example version so you know what to expect:
 https://auth-plug-example.herokuapp.com/admin
+![wake-sleeping-heroku-app](http://auth-plug-example.herokuapp.com/ping)
 
 You will be redirected to:
 
