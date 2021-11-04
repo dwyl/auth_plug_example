@@ -48,4 +48,18 @@ defmodule AppWeb.PageControllerTest do
     assert conn.state == :sent
     assert conn.resp_body =~ <<71, 73, 70, 56, 57>>
   end
+
+  test "get /logout with valid JWT", %{conn: conn} do
+    data = %{email: "alex@dwyl.com", givenName: "Alexander",
+      picture: "this", auth_provider: "GitHub"}
+
+    jwt = AuthPlug.Token.generate_jwt!(data)
+
+    conn =
+      conn
+      |> put_req_header("authorization", jwt)
+      |> get("/logout")
+
+    assert html_response(conn, 302) =~ "logged out"
+  end
 end
