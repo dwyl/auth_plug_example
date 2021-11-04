@@ -18,4 +18,10 @@ defmodule AppWeb.PageController do
   def ping(conn, params) do
     Ping.render_pixel(conn, params)
   end
+
+  def logout(conn, _params) do
+    conn
+    |> AuthPlug.logout()
+    |> render("loggedout.html")
+  end
 end

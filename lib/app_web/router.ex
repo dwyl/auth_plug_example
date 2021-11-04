@@ -7,7 +7,6 @@ defmodule AppWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    # plug AuthPlugOptional
   end
 
   pipeline :authoptional, do: plug(AuthPlugOptional, %{})
@@ -18,6 +17,7 @@ defmodule AppWeb.Router do
     get "/", PageController, :index
     get "/optional", PageController, :optional
     get "/ping", PageController, :ping
+    get "/logout", PageController, :logout
   end
 
   pipeline :auth, do: plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
