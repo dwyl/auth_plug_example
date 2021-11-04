@@ -7,17 +7,28 @@
     <title><%= assigns[:page_title] || "App · Phoenix Framework" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <%= csrf_meta_tag() %>
+    <style>
+      li {
+        float: right;
+        margin-left: 10px !important;
+      }
+      img {
+        border-radius:30%;
+      }
+    </style>
   </head>
   <body>
     <header>
       <section class="container">
         <nav role="navigation">
           <ul>
-            <li style="float:right"><a href="/optional">Auth Optional</a></li>
-            <li style="float:right; margin-right:20px;"><a href="/admin">Admin</a></li>
             <%= if Map.has_key?(@conn.assigns, :person) do %>
-              <li> <img width="32px" src="<%= @conn.assigns.person.picture %>" style="float:right;"/> </li>
+              <li> <img width="24px" src="<%= @conn.assigns.person.picture %>" style=""/> </li>
+              <li style=""><a href="/logout">&nbsp;Logout</a></li>
             <% end %>
+            <li style=""><a href="/optional">&nbsp;Auth Optional</a></li>
+            <li style=""><a href="/admin">&nbsp;Admin</a></li>
+
           </ul>
         </nav>
         <a href="https://github.com/dwyl/auth_plug">
