@@ -20,7 +20,7 @@ defmodule AppWeb.Router do
     get "/logout", PageController, :logout
   end
 
-  pipeline :auth, do: plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
+  pipeline :auth, do: plug(AuthPlug)
 
   scope "/", AppWeb do
     pipe_through :browser
