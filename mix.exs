@@ -9,11 +9,13 @@ defmodule App.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
+      aliases: aliases(),
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
         coveralls: :test,
-        "coveralls.html": :test
+        "coveralls.html": :test,
+        c: :test
       ]
     ]
   end
@@ -48,6 +50,12 @@ defmodule App.MixProject do
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.14.3", only: :test}
+    ]
+  end
+
+  defp aliases do
+    [
+      c: ["coveralls.html"]
     ]
   end
 end
