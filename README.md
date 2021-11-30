@@ -5,9 +5,9 @@
 A working example of
 [**`auth_plug`**](https://github.com/dwyl/auth_plug)
 showing you how simple it is
-to add enable
+to use
 [**`auth`**](https://github.com/dwyl/auth)
-to your Phoenix App!
+in your Phoenix App!
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/auth_plug_example/Elixir%20CI?label=build&style=flat-square)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](http://codecov.io/github/dwyl/auth_plug_example?branch=master)
@@ -22,7 +22,8 @@ to your Phoenix App!
 
 The purpose of this project/repo is to demonstrate how simple
 it is to integrate **`auth_plug`** into _any_ Phoenix Web App/API.
-
+Our objective was to build a re-useable auth _system_
+that we could add to any Phoenix App in less than 5 minutes.
 
 ## What?
 
@@ -49,7 +50,6 @@ in all our projects and more specifically for our
 But we have made it as _generic_ as possible
 to show that _anyone_ can use (an instance of the) Auth Service
 to add Auth to _any_ app in less than 2 minutes!
-
 
 
 ## How?

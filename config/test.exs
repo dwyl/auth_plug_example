@@ -8,3 +8,6 @@ config :app, AppWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :auth_plug,
+  httpoison_mock: true

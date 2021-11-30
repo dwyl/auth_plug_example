@@ -4,16 +4,18 @@ defmodule App.MixProject do
   def project do
     [
       app: :app,
-      version: "1.3.3",
+      version: "1.4.6",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
+      aliases: aliases(),
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
         coveralls: :test,
-        "coveralls.html": :test
+        "coveralls.html": :test,
+        c: :test
       ]
     ]
   end
@@ -42,12 +44,18 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.3.3"},
+      {:auth_plug, "~> 1.4.6"},
       # wake up Heroku app
       {:ping, "~> 1.1.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.14.3", only: :test}
+    ]
+  end
+
+  defp aliases do
+    [
+      c: ["coveralls.html"]
     ]
   end
 end

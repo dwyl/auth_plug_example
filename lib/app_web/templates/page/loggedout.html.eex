@@ -1,0 +1,7 @@
+<section class="phx-hero">
+  <h1><%= gettext "You are logged out!" %></h1>
+
+  <p>If you attempt to access the 
+  <a href="/admin">/admin</a> endpoint now, 
+  you will be required to login again.
+</section>
