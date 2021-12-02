@@ -9,6 +9,6 @@
   <% else %>
     Hello Stranger! You are viewing a page with Optional Auth.
     If you want to unlock the secrets of this page,
-    try <a href="/admin">login</a>
+    try <%= link "Login", to: @auth_url %>
   <% end %>
 </section>

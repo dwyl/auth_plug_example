@@ -11,8 +11,8 @@ defmodule AppWeb.PageController do
   end
 
   def optional(conn, _param) do
-    # IO.inspect(conn.assigns, label: "conn.assigns")
-    render(conn, "optional.html")
+    auth_url = AuthPlug.get_auth_url(conn)
+    render(conn, "optional.html", auth_url: auth_url)
   end
 
   def ping(conn, params) do
