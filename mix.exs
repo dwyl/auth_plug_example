@@ -49,7 +49,7 @@ defmodule App.MixProject do
       {:ping, "~> 1.1.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
-      {:excoveralls, "~> 0.14.3", only: :test}
+      {:excoveralls, "~> 0.15.0", only: :test}
     ]
   end
 
