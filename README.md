@@ -12,8 +12,8 @@ in your Phoenix App!
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/auth_plug_example/Elixir%20CI?label=build&style=flat-square)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](http://codecov.io/github/dwyl/auth_plug_example?branch=master)
 [![Hex.pm](https://img.shields.io/hexpm/v/auth_plug?color=brightgreen&style=flat-square)](https://hex.pm/packages/auth_plug)
-[![Libraries.io dependency status](https://img.shields.io/librariesio/release/hex/auth_plug?logoColor=brightgreen&style=flat-square)](https://github.com/dwyl/auth_plug/blob/master/mix.exs)
 [![HitCount](http://hits.dwyl.com/dwyl/auth_plug_example.svg)](http://hits.dwyl.com/dwyl/auth_plug_example)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/auth_plug/issues)
 </div>
 <br />
 
@@ -34,7 +34,6 @@ and showcase a protected route.
 Before you attempt to use the **`auth_plug`**,
 try the Heroku example version so you know what to expect:
 https://auth-plug-example.herokuapp.com/admin
-![wake-sleeping-heroku-app](http://auth-plug-example.herokuapp.com/ping)
 
 You will be redirected to:
 
