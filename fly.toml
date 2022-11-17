@@ -1,12 +1,12 @@
-# fly.toml file generated for auth-plug-example on 2022-11-17T15:05:50Z
+# fly.toml file generated for auth-plug on 2022-11-17T15:15:15Z
 
-app = "auth-plug-example"
+app = "auth-plug"
 kill_signal = "SIGTERM"
 kill_timeout = 5
 processes = []
 
 [env]
-  PHX_HOST = "auth-plug-example.fly.dev"
+  PHX_HOST = "auth-plug.fly.dev"
   PORT = "8080"
 
 [experimental]
