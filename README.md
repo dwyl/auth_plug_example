@@ -33,11 +33,16 @@ and showcase a protected route.
 
 Before you attempt to use the **`auth_plug`**,
 try the Heroku example version so you know what to expect:
-https://auth-plug-example.herokuapp.com/admin
+https://auth-plug.fly.dev/admin
 
 You will be redirected to:
 
-![auth_plug_example](https://user-images.githubusercontent.com/194400/80765920-154eb600-8b3c-11ea-90d4-a64224d31a5b.png)
+![auth_demo](https://user-images.githubusercontent.com/194400/202489883-16d727f4-8f18-4fba-9e27-00ea01329482.png)
+
+Once you have logged in, you will be redirected back:
+
+
+![auth_plug_example-logged-in](https://user-images.githubusercontent.com/194400/202489177-47c53d17-d4e4-44eb-a923-c64e14ad214c.png)
 
 
 
@@ -55,9 +60,10 @@ to add Auth to _any_ app in less than 2 minutes!
 
 ### 1. Create New Phoenix App
 
-```
+```sh
 mix phx.new app --no-ecto --no-webpack
 ```
+
 When asked if you want to `Fetch and install dependencies? [Yn]`
 Type <kbd>Y</kbd> followed by the <kbd>Enter</kbd> key.
 
@@ -83,7 +89,7 @@ and locate the `defp deps do` section.
 Add the line:
 
 ```
-{:auth_plug, "~> 1.2.1"}
+{:auth_plug, "~> 1.4"}
 ```
 
 > E.g:
@@ -104,7 +110,7 @@ Open the `lib/app_web/router.ex` file and locate the section:
 Immediately below this add the following lines of code:
 
 ```elixir
-  pipeline :auth, do: plug(AuthPlug, %{auth_url: "https://dwylauth.herokuapp.com"})
+  pipeline :auth, do: plug(AuthPlug)
 
   scope "/", AppWeb do
     pipe_through :browser
@@ -182,11 +188,12 @@ And paste the following code into it:
 
 ### 6. Get and Set the `AUTH_API_KEY` Environment Variable
 
-Visit: https://dwylauth.herokuapp.com
+Visit: 
+[authdemo.fly.dev](https://authdemo.fly.dev/apps/new)
 and create a New App:
 
 
-![dwyl-auth-app-api-key-setup](https://user-images.githubusercontent.com/194400/93143513-0712c800-f6e0-11ea-9020-c253805d66df.gif)
+![dwyl-auth-app-api-key-setup](https://user-images.githubusercontent.com/194400/202491060-6c2d015b-1313-4f94-8a8c-cdb52bd8aa5f.png)
 
 
 Save the key as an environment variable named `AUTH_API_KEY`.
@@ -210,7 +217,7 @@ Now open your web browser to: http://localhost:4000/admin
 
 Given that you are not yet authenticated,
 your request will be redirected to
-https://dwylauth.herokuapp.com/?referer=http://localhost:4000/admin&auth_client_id=etc
+https://authdemo.fly.dev/?referer=http://localhost:4000/admin&auth_client_id=etc
 
 Once you have successfully authenticated with your GitHub or Google account,
 you will be redirected back to `localhost:4000/admin`
