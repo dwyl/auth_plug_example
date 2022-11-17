@@ -15,10 +15,6 @@ defmodule AppWeb.PageController do
     render(conn, "optional.html", auth_url: auth_url)
   end
 
-  def ping(conn, params) do
-    Ping.render_pixel(conn, params)
-  end
-
   def logout(conn, _params) do
     conn
     |> AuthPlug.logout()

@@ -16,7 +16,6 @@ defmodule AppWeb.Router do
     pipe_through :authoptional
     get "/", PageController, :index
     get "/optional", PageController, :optional
-    get "/ping", PageController, :ping
     get "/logout", PageController, :logout
   end
 
