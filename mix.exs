@@ -44,7 +44,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.4.21"},
+      {:auth_plug, "~> 1.5.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.15.0", only: :test}
