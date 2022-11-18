@@ -4,10 +4,10 @@ defmodule App.MixProject do
   def project do
     [
       app: :app,
-      version: "1.4.6",
+      version: "1.4.7",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -35,18 +35,16 @@ defmodule App.MixProject do
   # Specifies project dependencies:
   defp deps do
     [
-      {:phoenix, "~> 1.6.2"},
+      {:phoenix, "~> 1.6.14"},
       {:phoenix_pubsub, "~> 2.1.1"},
-      {:phoenix_html, "~> 3.0"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:gettext, "~> 0.18"},
-      {:jason, "~> 1.2"},
+      {:phoenix_html, "~> 3.2"},
+      {:phoenix_live_reload, "~> 1.3", only: :dev},
+      {:gettext, "~> 0.20"},
+      {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.5"},
 
       # github.com/dwyl/auth_plug
       {:auth_plug, "~> 1.5.0"},
-      # wake up Heroku app
-      {:ping, "~> 1.1.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.15.0", only: :test}
