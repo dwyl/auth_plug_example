@@ -44,7 +44,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.4.8"},
+      {:auth_plug, "~> 1.5.0"},
       # wake up Heroku app
       {:ping, "~> 1.1.0"},
 
