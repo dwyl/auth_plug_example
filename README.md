@@ -10,9 +10,9 @@ to use
 in your Phoenix App!
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/auth_plug_example/Elixir%20CI?label=build&style=flat-square)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](http://codecov.io/github/dwyl/auth_plug_example?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](https://codecov.io/github/dwyl/auth_plug_example?branch=master)
 [![Hex.pm](https://img.shields.io/hexpm/v/auth_plug?color=brightgreen&style=flat-square)](https://hex.pm/packages/auth_plug)
-[![HitCount](http://hits.dwyl.com/dwyl/auth_plug_example.svg)](http://hits.dwyl.com/dwyl/auth_plug_example)
+[![HitCount](https://hits.dwyl.com/dwyl/auth_plug_example.svg)](https://hits.dwyl.com/dwyl/auth_plug_example)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/auth_plug/issues)
 </div>
 <br />
