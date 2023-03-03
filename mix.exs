@@ -35,7 +35,7 @@ defmodule App.MixProject do
   # Specifies project dependencies:
   defp deps do
     [
-      {:phoenix, "~> 1.6.14"},
+      {:phoenix, "~> 1.7.1"},
       {:phoenix_pubsub, "~> 2.1.1"},
       {:phoenix_html, "~> 3.2"},
       {:phoenix_live_reload, "~> 1.3", only: :dev},
