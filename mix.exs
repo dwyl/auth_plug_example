@@ -47,7 +47,7 @@ defmodule App.MixProject do
       {:auth_plug, "~> 1.5.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
-      {:excoveralls, "~> 0.15.0", only: :test}
+      {:excoveralls, "~> 0.16.0", only: :test}
     ]
   end
 
