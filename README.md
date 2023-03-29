@@ -9,7 +9,7 @@ to use
 [**`auth`**](https://github.com/dwyl/auth)
 in your Phoenix App!
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/auth_plug_example/Elixir%20CI?label=build&style=flat-square)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/auth_plug_example/ci.yml?label=build&style=flat-square&branch=main)](https://github.com/dwyl/auth_plug_example/actions)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](https://codecov.io/github/dwyl/auth_plug_example?branch=master)
 [![Hex.pm](https://img.shields.io/hexpm/v/auth_plug?color=brightgreen&style=flat-square)](https://hex.pm/packages/auth_plug)
 [![HitCount](https://hits.dwyl.com/dwyl/auth_plug_example.svg)](https://hits.dwyl.com/dwyl/auth_plug_example)
