@@ -7,7 +7,7 @@ defmodule App.MixProject do
       version: "1.4.7",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -45,6 +45,9 @@ defmodule App.MixProject do
 
       # github.com/dwyl/auth_plug
       {:auth_plug, "~> 1.5.0"},
+
+      #79
+      {:phoenix_view, "~> 2.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
       {:excoveralls, "~> 0.16.0", only: :test}
