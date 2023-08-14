@@ -50,7 +50,7 @@ defmodule App.MixProject do
       {:phoenix_view, "~> 2.0"},
 
       # Check test coverage: https://github.com/parroty/excoveralls
-      {:excoveralls, "~> 0.16.0", only: :test}
+      {:excoveralls, "~> 0.17.0", only: :test}
     ]
   end
 
