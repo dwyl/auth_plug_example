@@ -37,7 +37,7 @@ defmodule App.MixProject do
     [
       {:phoenix, "~> 1.7.7"},
       {:phoenix_pubsub, "~> 2.1.1"},
-      {:phoenix_html, "~> 3.2"},
+      {:phoenix_html, "~> 4.0"},
       {:phoenix_live_reload, "~> 1.3", only: :dev},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.4"},
