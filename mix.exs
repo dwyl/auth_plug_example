@@ -36,7 +36,7 @@ defmodule App.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.8.1"},
-      {:phoenix_pubsub, "~> 2.1.1"},
+      {:phoenix_pubsub, "~> 2.2.0"},
       {:phoenix_html, "~> 4.1"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_live_reload, "~> 1.3", only: :dev},
