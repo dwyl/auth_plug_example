@@ -2,12 +2,12 @@
 
 # `auth_plug` _example_
 
-A working example of
-[**`auth_plug`**](https://github.com/dwyl/auth_plug)
-showing you how simple it is
+A working _example_ of
+[**`auth_plug`**](https://github.com/dwyl/auth_plug)<br />
+showing you how simple it is<br />
 to use
 [**`auth`**](https://github.com/dwyl/auth)
-in your Phoenix App!
+in your `Phoenix` App!
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/auth_plug_example/ci.yml?label=build&style=flat-square&branch=main)](https://github.com/dwyl/auth_plug_example/actions)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/auth_plug_example/master.svg?style=flat-square)](https://codecov.io/github/dwyl/auth_plug_example?branch=master)
@@ -17,70 +17,81 @@ in your Phoenix App!
 </div>
 <br />
 
-
 ## Why?
 
-The purpose of this project/repo is to demonstrate how simple
+The purpose of this project/repo is to showcase how simple
 it is to integrate **`auth_plug`** into _any_ Phoenix Web App/API.
-Our objective was to build a re-useable auth _system_
-that we could add to any Phoenix App in less than 5 minutes.
+Our goal was to build a **re-useable auth _system_**
+that we could add to any Phoenix App in **_less_ than 5 minutes**.
 
 ## What?
 
 The most basic example of using **`auth_plug`**
-to add Authentication to a Phoenix App
+to add Authentication to a `Phoenix` App
 and showcase a protected route.
 
-Before you attempt to use the **`auth_plug`**,
-try the Heroku example version so you know what to expect:
-https://auth-plug.fly.dev/admin
+**Before** you attempt to use **`auth_plug`**,
+try the Fly.io example version
+so you know what to expect:
+[auth-plug.fly.dev](https://auth-plug.fly.dev)
 
-You will be redirected to:
+You should see the following homepage:
 
-![auth_demo](https://user-images.githubusercontent.com/194400/202489883-16d727f4-8f18-4fba-9e27-00ea01329482.png)
+<img src="https://github.com/user-attachments/assets/f3b30f69-8806-46fd-9536-ef696aa16146" />
 
-Once you have logged in, you will be redirected back:
+When you click the
+[**`admin`**](https://auth-plug.fly.dev/admin) link,
+you will be redirected to:
+[https://authdemo.fly.dev/?referer=https://auth-plug.fly.dev/admin](https://authdemo.fly.dev/?referer=https://auth-plug.fly.dev/admin&auth_client_id=YTsV7kuDwQFLKEi3RgsUdJdd942AMCeFdJRdEBEqazMmbW6M12Aw3)
 
+![auth_demo](https://github.com/user-attachments/assets/d589122a-175d-4802-8095-97a505cd1511)
 
-![auth_plug_example-logged-in](https://user-images.githubusercontent.com/194400/202489177-47c53d17-d4e4-44eb-a923-c64e14ad214c.png)
+Once you have logged in, you will be redirected back to `auth-plug.fly.dev`:
 
+![auth_plug_example-logged-in](https://github.com/user-attachments/assets/19f5a9eb-699d-471c-8913-ce9ef66f1fb2)
 
+Then if you **logout**, you will see:
+
+<img src="https://github.com/user-attachments/assets/d6d4948c-c5b8-4840-9d6e-742bcef07317" />
+
+That's it. Short and sweet.
 
 ## Who?
 
-This example is for us @dwyl who will be using **`auth_plug`**
+This example is for us @dwyl who are using **`auth_plug`**
 in all our projects and more specifically for our
 [`App`](https://github.com/dwyl/app).
-But we have made it as _generic_ as possible
-to show that _anyone_ can use (an instance of the) Auth Service
-to add Auth to _any_ app in less than 2 minutes!
-
+We have made it as _generic_ as possible
+to show that _anyone_ can use (an instance of the) **`Auth` Service**
+to add **Auth** to **_any_ app** in less than **2 minutes**!
 
 ## How?
 
-### 1. Create New Phoenix App
+These are the steps to recreate the `auth_plug_demo` App in **2 minutes**:
+
+### 1. Create New `Phoenix` App
 
 ```sh
-mix phx.new app --no-ecto --no-webpack
+mix phx.new app --no-ecto
 ```
 
 When asked if you want to `Fetch and install dependencies? [Yn]`
 Type <kbd>Y</kbd> followed by the <kbd>Enter</kbd> key.
 
-> This example only needs the bare minimum Phoenix;
-we don't need any JavaScript or Database. <br />
-For more info, see:
-https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html <br />
-> The beauty is that this simple use-case
-is identical to the advanced one.
-Once you understand these basic principals,
-you "grock" how to use `auth_plug` _anywhere_!
-
+> This example only needs the bare minimum `Phoenix`;
+  we don't need a `Database`. <br />
+  For more info, see:
+  https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html <br />
+  > The beauty is that this simple use-case
+  is identical to the advanced one.
+  Once you understand these basic principals,
+  you
+  [grok](https://en.wikipedia.org/wiki/Grok)
+  how to use `auth_plug` _anywhere_!
 
 Change into the `app` directory (`cd app`)
 and open the project in your text editor (or IDE). <br />
-e.g: `atom .`
-
+e.g: `code .`
 
 ### 2. Add `auth_plug` to `deps`
 
@@ -89,7 +100,7 @@ and locate the `defp deps do` section.
 Add the line:
 
 ```
-{:auth_plug, "~> 1.4"}
+{:auth_plug, "~> 1.5"}
 ```
 
 > E.g:
@@ -122,18 +133,17 @@ Immediately below this add the following lines of code:
 > E.g:
 [`/lib/app_web/router.ex#L23-L29`](https://github.com/dwyl/auth_plug_example/blob/8ce0f10e656b94a93b8f02af240b3897ce23c006/lib/app_web/router.ex#L23-L29)
 
-
 #### _Explanation_
 
 There are two parts to this code:
 
-1. Create a new pipeline called `:auth` which will execute the `AuthPlug`
-passing in the `auth_url` as an initialisation option.
+1. Create a new pipeline called `:auth`
+  which will execute the `AuthPlug`
+  passing in the `auth_url` as an initialisation option.
 2. Create a new scope where we `pipe_through`
-both the `:browser` and `:auth` pipelines.
+  both the `:browser` and `:auth` pipelines.
 
 This means that the `"/admin"` route is protected by `AuthPlug`.
-
 
 ### 4. Add the `admin` function to the `PageController`
 
@@ -154,15 +164,12 @@ Directly below it, add the following code:
   end
 ```
 
-> E.g:
+> e.g:
 [`/lib/app_web/controllers/page_controller.ex#L8-L10`](https://github.com/dwyl/auth_plug_example/blob/e0e31dbf341f4b8877bca0a9ec846b538e04406a/lib/app_web/controllers/page_controller.ex#L8-L10)
-
 
 This just means when the `admin/2` function is invoked,
 render the `admin.html` template. <br />
 Speaking of which, let's create it!
-
-
 
 ### 5. Create the `admin.html.eex` Template
 
@@ -185,16 +192,13 @@ And paste the following code into it:
 > E.g:
 [`/lib/app_web/templates/page/admin.html.eex`](https://github.com/dwyl/auth_plug_example/blob/7b8ff52fd091e3cee2d3540b6701e68bbf42e179/lib/app_web/templates/page/admin.html.eex)
 
-
 ### 6. Get and Set the `AUTH_API_KEY` Environment Variable
 
-Visit: 
+Visit:
 [authdemo.fly.dev](https://authdemo.fly.dev/apps/new)
-and create a New App:
-
+and create a **New App**:
 
 ![dwyl-auth-app-api-key-setup](https://user-images.githubusercontent.com/194400/202491060-6c2d015b-1313-4f94-8a8c-cdb52bd8aa5f.png)
-
 
 Save the key as an environment variable named `AUTH_API_KEY`.
 Remember to `export` the environment variable
@@ -204,12 +208,11 @@ or add it to an `.env` file which should be in your `.gitignore` file.
 please see:
 https://github.com/dwyl/learn-environment-variables
 
-
-### 7. Run the App!
+### 7. Run the App
 
 Run your phoenix app on localhost:
 
-```
+```sh
 mix phx.server
 ```
 
@@ -227,7 +230,7 @@ where the `/admin` route will be visible.
 
 ## That's it!! 🎉
 
-You just setup auth in a brand new phoenix app using **`auth_plug`**!
+You just setup auth in a brand new `Phoenix` app using **`auth_plug`**!
 
 If you got stuck or have any questions,
 please
