@@ -11,14 +11,14 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7  # github.com/actions/checkout
     - name: Set up Elixir
-      uses: erlef/setup-beam@v1
+      uses: erlef/setup-beam@v1  # github.com/erlef/setup-beam
       with:
         elixir-version: '1.18.4' # Define the elixir version [required]
-        otp-version: '28.0.1' # Define the OTP version [required]
+        otp-version: '28.0.1'    # Define the OTP version [required]
     - name: Restore dependencies cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6     # github.com/actions/cache
       with:
         path: deps
         key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
@@ -32,7 +32,7 @@ jobs:
         MIX_ENV: test
         AUTH_API_KEY: 2PzB7PPnpuLsbWmWtXpGyI+kfSQSQ1zUW2Atz/+8PdZuSEJzHgzGnJWV35nTKRwx/authdemo.fly.dev
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v7  # github.com/codecov/codecov-action
 
   # Continuous Deployment to Fly.io
   # https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
@@ -45,7 +45,7 @@ jobs:
     env:
       FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: superfly/flyctl-actions@1.1
+      - uses: actions/checkout@v7         # github.com/actions/checkout
+      - uses: superfly/flyctl-actions@1.5 # github.com/superfly/flyctl-actions
         with:
           args: "deploy"
