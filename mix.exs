@@ -45,7 +45,7 @@ defmodule App.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # github.com/dwyl/auth_plug
-      {:auth_plug, "~> 1.5.0"},
+      {:auth_plug, "~> 1.6.0"},
 
       #79
       {:phoenix_view, "~> 2.0"},
